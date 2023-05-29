@@ -34,8 +34,8 @@ ribbon:
   eager-load:
     enabled: true
     clients: userservice
-#feign:
-#  client:
-#    config:
-#      default:
-#        logger-level: FULL
+feign:
+  httpclient:
+    enabled: true #支持http开关
+    max-connections: 200 #最大连接数
+    max-connections-per-route: 50 #单个连接路径最大连接数
